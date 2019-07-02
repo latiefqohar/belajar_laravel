@@ -28,14 +28,17 @@ Route::get('blog', function () {
 Route::get('dosen', 'DosenController@index');
 
 //localhost/pegawai
-Route::get('/pegawai/{nama}', 'PegawaiController@index');
+// Route::get('/pegawai/{nama}', 'PegawaiController@index');
 
 //tutorial 5
-Route::get('/formulir','PegawaiController@formulir');
-Route::post('/formulir/proses','PegawaiController@proses');
+// Route::get('/formulir','PegawaiController@formulir');
+// Route::post('/formulir/proses','PegawaiController@proses');
 
 // route blog
 Route::get('/blog', 'BlogController@home');
 Route::get('/blog/tentang', 'BlogController@tentang');
 Route::get('/blog/kontak', 'BlogController@kontak');
+
+//route crud
+Route::get('/pegawai','PegawaiController@index');
 
