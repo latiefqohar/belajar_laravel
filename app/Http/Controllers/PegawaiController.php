@@ -24,7 +24,21 @@ class PegawaiController extends Controller
         //memanggil data dari table pegawai
         $pegawai=DB::table('pegawai')->get();
 
-        //mengirim data pegawai ke view index
+        //mengirim data pegawai ke view index dengan variable pegawai
         return view('index',['pegawai'=>$pegawai]);
+    }
+    public function tambah(){
+        return view('tambah');
+    }
+    public function store(Request $input){//Request baku, $input adalah variable bebas
+        //insert data ke table pegawai
+        DB::table('pegawai')->insert([
+            'pegawai_nama'=>$input->nama,//pegawai_nama adalah nama field, $input variable parameter, nama adalah nama field
+            'pegawai_jabatan'=>$input->jabatan,
+            'pegawai_umur'=>$input->umur,
+            'pegawai_alamat'=>$input->alamat
+        ]);
+        //alihkan halaman ke halaman pegawai
+        return redirect('/pegawai');
     }
 }

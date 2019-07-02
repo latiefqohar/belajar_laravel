@@ -39,6 +39,12 @@ Route::get('/blog', 'BlogController@home');
 Route::get('/blog/tentang', 'BlogController@tentang');
 Route::get('/blog/kontak', 'BlogController@kontak');
 
-//route crud
+//route crud view
 Route::get('/pegawai','PegawaiController@index');
 
+//Route crud input
+Route::get('/pegawai/tambah','PegawaiController@tambah'); 
+//pegawai/tambah mengarah ke controller pegawaicontroller methode tambah
+
+//route proses input
+Route::post('/pegawai/store', 'PegawaiController@store');
