@@ -48,3 +48,9 @@ Route::get('/pegawai/tambah','PegawaiController@tambah');
 
 //route proses input
 Route::post('/pegawai/store', 'PegawaiController@store');
+
+//route crud edit
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+
+//route proses update
+Route::post('/pegawai/update','PegawaiController@update');
