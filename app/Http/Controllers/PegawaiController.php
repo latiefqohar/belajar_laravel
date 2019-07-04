@@ -41,7 +41,7 @@ class PegawaiController extends Controller
         //alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
     }
-
+    //methode index
     public function edit($id){
         //mengambil data pegawai berdasarkan id yang dipilih
         $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
