@@ -19,7 +19,9 @@ class PegawaiController extends Controller
     //     $alamat=$request->input('alamat');
     //     return "Nama : ".$nama.", Alamat : ".$alamat;
     // }
-        //index
+
+//index dari pegawai
+
     public function index(){
         //memanggil data dari table pegawai
         $pegawai=DB::table('pegawai')->get();
