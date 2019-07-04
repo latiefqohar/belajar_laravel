@@ -54,3 +54,6 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 
 //route proses update
 Route::post('/pegawai/update','PegawaiController@update');
+
+//route  untuk delete
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
