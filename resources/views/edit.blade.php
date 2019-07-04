@@ -12,9 +12,9 @@
 	
 	<br/>
 	<br/>
-    @foreach($pegawai as $p)
+    @foreach($pegawai as $p) //foreach
     <form action="/pegawai/update" method="post">
-    {{ csrf_field() }}
+    {{ csrf_field() }}// wajib
         <input type="hidden" name="id" value="{{ $p->pegawai_id}}">
         Nama <input type="text" required name="nama" value="{{$p->pegawai_nama}}">
         jabatan <input type="text" required name="jabatan" value="{{$p->pegawai_jabatan}}">
