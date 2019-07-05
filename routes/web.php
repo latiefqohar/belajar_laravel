@@ -57,3 +57,11 @@ Route::post('/pegawai/update','PegawaiController@update');
 
 //route  untuk delete
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//route untuk pencarian
+Route::get('/pegawai/cari','PegawaiController@cari');
+
+//route untuk form validation
+Route::get('/input', 'MalasngodingController@input');
+
+Route::post('/proses', 'MalasngodingController@proses');
